@@ -27,7 +27,8 @@ jobs:
       - name: Deploy to GCP VM via SSh
         run: |
           echo "Deploying to GCP VM..."
-          echo "HERE ${{ secrets.SSH_PRIVATE_KEY }} ${{ secrets.name }}"
+          echo "HERE ${{ secrets.SSH_PRIVATE_KEY }}"
           mkdir app
           cd app
+          EOF
           
