@@ -29,7 +29,6 @@ jobs:
         run: |
           echo "Deploying to GCP VM..."
           echo "HERE ${{ secrets.SSH_PRIVATE_KEY }} it is the secret key"
-          ssh -i b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZWQyNTUxOQAAACCzrgohAV/t8IlSKd4cYN1n/F+z1x9MdSXleh0GtpG87QAAAJBFmsn6RZrJ+gAAAAtzc2gtZWQyNTUxOQAAACCzrgohAV/t8IlSKd4cYN1n/F+z1x9MdSXleh0GtpG87QAAAECq5BNUizZpgtJ5iGZwd+ckcszRo7OEZ9EDCn6lfHCQ2bOuCiEBX+3wiVIp3hxg3Wf8X7PXH0x1JeV6HQa2kbztAAAAC3Jvb3RASGFyaXNoAQI=@35.225.238.96
           mkdir app
           cd app
           
