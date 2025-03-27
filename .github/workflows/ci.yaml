@@ -26,9 +26,10 @@ jobs:
     steps:
       - name: Deploy to GCP VM via SSH
         run: |
-          echo "Deploying to GCP VM..."
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ci-cd-gcp
           sudo ssh -i ci-cd-gcp -o StrictHostKeyChecking=no root@${{ secrets.GCP_VM_IP }} "echo 'SSH connection established'"
           sudo mkdir app
           cd app
+          touch app.js
+          ls
+          
           
