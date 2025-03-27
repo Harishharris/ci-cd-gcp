@@ -31,5 +31,5 @@ jobs:
           sudo ssh -i ci-cd-gcp -o StrictHostKeyChecking=no root@${{ secrets.GCP_VM_IP }} "echo 'SSH connection established'"
           sudo mkdir app
           cd app
-          touch app.js
+          sudo touch app.js
           ls -la
