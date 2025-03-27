@@ -29,7 +29,11 @@ jobs:
           echo "Deploying to GCP VM..."
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ci-cd-gcp
           sudo ssh -i ci-cd-gcp -o StrictHostKeyChecking=no root@${{ secrets.GCP_VM_IP }} "echo 'SSH connection established'"
-          sudo mkdir app
-          cd app
-          sudo touch app.js
+          cd harish
+          git pull git@github.com:Harishharris/ci-cd-gcp.git .
+          sudo apt update
+          sudo apt install -y nodejs npm
+          sudo npm install -g pm2
+          npm install 
+          npm run dev
           ls -la
