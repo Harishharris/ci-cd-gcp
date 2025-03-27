@@ -28,6 +28,7 @@ jobs:
         run: |
           echo "Deploying to GCP VM..."
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ci-cd-gcp
+          cat ci-cd-gcp
           ssh -i ci-cd-gcp root@${{ secrets.GCP_VM_IP }}
           sudo mkdir app
           sudo cd app
