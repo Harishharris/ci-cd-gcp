@@ -19,3 +19,14 @@ jobs:
       - name: Install dependencies
         run: npm install
       
+    deploy:
+      runs-on: ubuntu-latest
+      needs: build
+
+      steps:
+        - name: Deploy to GCP VM via SSh
+          run: |
+            ssh -i ${{ secrets.SSH_PRIVATE_KEY }} root@${{ secrets.GCP_VM_IP }} 
+            mkdir app
+            cd app
+          
