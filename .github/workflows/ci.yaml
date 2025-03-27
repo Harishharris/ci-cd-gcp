@@ -29,6 +29,13 @@ jobs:
         run: |
           echo "Deploying to GCP VM..."
           echo "HERE ${{ secrets.SSH_PRIVATE_KEY }} it is the secret key"
+          ssh -o StrictHostKeyChecking=no -i <(echo "-----BEGIN OPENSSH PRIVATE KEY-----
+          b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAAAMwAAAAtzc2gtZW
+          QyNTUxOQAAACCzrgohAV/t8IlSKd4cYN1n/F+z1x9MdSXleh0GtpG87QAAAJBFmsn6RZrJ
+          +gAAAAtzc2gtZWQyNTUxOQAAACCzrgohAV/t8IlSKd4cYN1n/F+z1x9MdSXleh0GtpG87Q
+          AAAECq5BNUizZpgtJ5iGZwd+ckcszRo7OEZ9EDCn6lfHCQ2bOuCiEBX+3wiVIp3hxg3Wf8
+          X7PXH0x1JeV6HQa2kbztAAAAC3Jvb3RASGFyaXNoAQI=
+          -----END OPENSSH PRIVATE KEY-----") root@35.225.238.96 'bash -s' << 'EOF'
           mkdir app
           cd app
           
