@@ -24,7 +24,7 @@ jobs:
     needs: build
 
     steps:
-      - name: Deploy to GCP VM via SSh
+      - name: Deploy to GCP VM via SSH
         run: |
           echo "Deploying to GCP VM..."
           echo "HERE ${{ secrets.SSH_PRIVATE_KEY }}"
