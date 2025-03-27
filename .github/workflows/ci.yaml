@@ -35,4 +35,4 @@ jobs:
           echo "Deploying to GCP VM..."
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ci-cd-gcp
           chmod 600 ci-cd-gcp
-          sudo ssh -i ci-cd-gcp -o StrictHostKeyChecking=no root@${{ secrets.GCP_VM_IP }} cd /home/ubuntu && sudo apt update && git pull && npm install && npm run build && pm2 restart all
+          sudo ssh -i ci-cd-gcp -o StrictHostKeyChecking=no root@${{ secrets.GCP_VM_IP }} cd /home/ubuntu && sudo apt update && git pull && npm install && npm run dev
