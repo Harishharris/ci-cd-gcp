@@ -5,6 +5,10 @@ app.get('/', (req, res) => {
   res.send('Hello World!');
 });
 
+app.get('/product', (req, res) => {
+  res.send('Product Page!');
+});
+
 app.get('/api', (req, res) => {
   res.json({ message: 'Hello from API!' });
 });
