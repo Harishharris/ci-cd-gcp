@@ -23,5 +23,6 @@ jobs:
             cd app
             rm -rf *
             git clone https://github.com/Harishharris/ci-cd-gcp.git .
+            sudo kill -9 $(ps -e | grep node | awk '{print $1}') 2>/dev/null || true
             npm install
             npm run dev &
