@@ -21,7 +21,7 @@ jobs:
           key: ${{ secrets.GCP_SSH_KEY }}
           script: |
             cd app
+            rm -rf *
             git clone https://github.com/Harishharris/ci-cd-gcp.git
             npm install
             npm run dev &
-            
