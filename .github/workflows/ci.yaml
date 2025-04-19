@@ -25,3 +25,4 @@ jobs:
             sudo kill -9 $(ps -e | grep node | awk '{print $1}') 2>/dev/null || true
             npm install
             npm run dev &
+            exit 0
