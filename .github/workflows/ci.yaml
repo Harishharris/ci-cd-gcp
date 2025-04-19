@@ -25,7 +25,7 @@ jobs:
             fi
             git clone https://github.com/Harishharris/ci-cd-gcp.git app
             cd app
-            sudo kill -9 $(ps -e | grep node | awk '{print $1}') 2>/dev/null || true
+            sudo pm2 delete app || true
             npm install
             pm2 start app.js
             exit 0
