@@ -20,6 +20,9 @@ jobs:
           username: ${{ secrets.GCP_SSH_USER }}
           key: ${{ secrets.GCP_SSH_KEY }}
           script: |
+            if [ -d "app" ]; then
+              rm -rf app
+            fi
             git clone https://github.com/Harishharris/ci-cd-gcp.git app
             cd app
             sudo kill -9 $(ps -e | grep node | awk '{print $1}') 2>/dev/null || true
