@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/product', (req, res) => {
-  res.send('This is a Product Page!');
+  res.send('This is a beautiful product page!');
 });
 
 app.get('/api', (req, res) => {
