@@ -27,5 +27,5 @@ jobs:
             cd app
             sudo pm2 delete app || true
             npm install
-            pm2 start app.js
+            pm2 start app.js --name app -f
             exit 0
